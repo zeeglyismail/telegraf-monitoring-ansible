@@ -1,0 +1,7 @@
+- name: Configure edge VMs with Telegraf
+  hosts: edge
+  become: yes
+  tasks:
+    - import_tasks: tasks/main.yml
+  handlers:
+    - import_tasks: handlers/main.yml
